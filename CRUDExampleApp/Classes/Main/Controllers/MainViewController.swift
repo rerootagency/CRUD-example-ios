@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-final class MainViewController: ViewController {
+final class MainViewController: UIViewController {
     
     var students: [StudentViewModel] = [StudentViewModel]()
     
@@ -29,13 +29,13 @@ final class MainViewController: ViewController {
         self.loadViews()
     }
     
-    private func addCreateBarButton() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createButtonTapped(_:)))
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadData()
+    }
+    
+    private func addCreateBarButton() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createButtonTapped(_:)))
     }
     
     func loadData() {
@@ -76,6 +76,7 @@ final class MainViewController: ViewController {
     
 }
 
+//MARK: Table view delegate/datasource
 extension MainViewController:UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -98,6 +99,7 @@ extension MainViewController:UITableViewDelegate, UITableViewDataSource {
     
 }
 
+//MARK: Button actions
 extension MainViewController {
     
     @objc private func createButtonTapped(_ sender: UIBarButtonItem) {

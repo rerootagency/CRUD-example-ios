@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 
+//MARK: Enum used for changing mods of ViewController
 enum DetailsType {
     case creation
     case editing
@@ -317,6 +318,8 @@ final class DetailsViewController: ViewController {
     }
 }
 
+
+//MARK: Button actions
 extension DetailsViewController {
     
     private func addBarButtonItems() {
@@ -362,6 +365,7 @@ extension DetailsViewController {
     
 }
 
+//MARK: TextField delegate
 extension DetailsViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {

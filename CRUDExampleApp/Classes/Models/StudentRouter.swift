@@ -5,7 +5,6 @@
 //  Created by dejan kraguljac on 10/01/2019.
 //  Copyright © 2019 ReRoot. All rights reserved.
 //
-
 import Alamofire
 
 enum StudentRouter: URLRequestConvertible {

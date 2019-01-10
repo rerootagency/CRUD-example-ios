@@ -30,6 +30,7 @@ struct StudentViewModel: Equatable {
         loginDate = StudentViewModel.formatLoginDate(loginDate: m.loginDate)
     }
     
+    //MARK: Custom init
     init(id: Int, name: String, lastName: String, email: String, position: String, loginDate: String) {
         self.id = "\(id)"
         self.name = name
@@ -38,6 +39,8 @@ struct StudentViewModel: Equatable {
         self.position = position
         self.email = email
     }
+    
+    //MARK: preparing data for UI
     
     func fullName() -> String {
         return "\(name) \(lastName)"
