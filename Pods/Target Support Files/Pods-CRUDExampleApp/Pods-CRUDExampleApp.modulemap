@@ -1,0 +1,6 @@
+framework module Pods_CRUDExampleApp {
+  umbrella header "Pods-CRUDExampleApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
